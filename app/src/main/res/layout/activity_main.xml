@@ -8,15 +8,38 @@
     android:orientation="vertical"
     android:gravity="center_vertical">
 
+    <RadioGroup
+        android:id="@+id/tweetGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="30dp">
+
+        <RadioButton
+            android:id="@+id/post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/post_tweet"
+            android:layout_marginEnd="10dp"/>
+
+        <RadioButton
+            android:id="@+id/reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reply_to_tweet" />
+    </RadioGroup>
+
     <TextView
+        android:id="@+id/lbl_contents"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="Twitter Link:"
-        android:textSize="18dp" />
+        android:layout_marginStart="10dp"
+        android:text="@string/tweet_contents"
+        android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/txt_link"
+        android:id="@+id/txt_contents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -26,12 +49,12 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="New Status:"
-        android:textSize="18dp" />
+        android:layout_marginStart="10dp"
+        android:text="@string/status"
+        android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/txt_status"
+        android:id="@+id/txt_source"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -42,6 +65,8 @@
         android:id="@+id/btn_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Update Status"
-        android:layout_gravity="center"></Button>
+        android:text="@string/post_tweet"
+        android:layout_gravity="center"/>
+
+
 </LinearLayout>
