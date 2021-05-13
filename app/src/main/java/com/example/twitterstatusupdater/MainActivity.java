@@ -28,20 +28,17 @@ public class MainActivity extends AppCompatActivity {
             String source = ((EditText) findViewById(R.id.txt_source)).getText().toString();
         });
 
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                current = checkedId;
-                switch (checkedId) {
-                    case R.id.post:
-                        ((TextView) findViewById(R.id.lbl_contents)).setText(R.string.tweet_contents);
-                        updateBtn.setText(R.string.post_tweet);
-                        break;
-                    case R.id.reply:
-                        ((TextView) findViewById(R.id.reply)).setText(R.string.original_link);
-                        updateBtn.setText(R.string.reply_to_tweet);
-                        break;
-                }
+        radioGroup.setOnCheckedChangeListener((group, checkedId) -> {
+            current = checkedId;
+            switch (checkedId) {
+                case R.id.post:
+                    ((TextView) findViewById(R.id.lbl_contents)).setText(R.string.tweet_contents);
+                    updateBtn.setText(R.string.post_tweet);
+                    break;
+                case R.id.reply:
+                    ((TextView) findViewById(R.id.reply)).setText(R.string.original_link);
+                    updateBtn.setText(R.string.reply_to_tweet);
+                    break;
             }
         });
     }
